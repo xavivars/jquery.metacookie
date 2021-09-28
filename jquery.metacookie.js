@@ -152,7 +152,7 @@ jQuery.extend(true, ( function () {
    * @param {String} value The value to set
    * @return {Void}
    */  
-  function setMetaCookie(subName, name, value) {
+  function setMetaCookie(subName, name, value, expires, path, domain, secure) {
     var currentCookieVal = getCookie(name),
     subCookies = [],
     temp = [],
@@ -188,7 +188,7 @@ jQuery.extend(true, ( function () {
         }
       }
 	  }
-    return(setCookie(name, newCookieVal));
+    return(setCookie(name, newCookieVal, expires, path, domain, secure));
   }
 
   /**
